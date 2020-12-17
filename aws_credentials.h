@@ -19,14 +19,14 @@ namespace credentials {
  * "...base64 data...\n"
  * "-----END CERTIFICATE-----";
  */
-const char rootCA[] = "-----BEGIN CERTIFICATE-----\n"
+const char rootCACrt[] = "-----BEGIN CERTIFICATE-----\n"
 "...\n"
 "...\n"
 "...\n"
 "-----END CERTIFICATE-----";
 
 /*
- * PEM-encoded client certificate
+ * PEM-encoded device certificate
  *
  * Must include the PEM header and footer,
  * and every line of the body needs to be quoted and end with \n:
@@ -34,14 +34,29 @@ const char rootCA[] = "-----BEGIN CERTIFICATE-----\n"
  * "...base64 data...\n"
  * "-----END CERTIFICATE-----";
  */
-const char clientCrt[] = "-----BEGIN CERTIFICATE-----\n"
+const char deviceCrt[] = "-----BEGIN CERTIFICATE-----\n"
 "...\n"
 "...\n"
 "...\n"
 "-----END CERTIFICATE-----";
 
 /*
- * PEM-encoded client private key.
+ * PEM-encoded device public key
+ *
+ * Must include the PEM header and footer,
+ * and every line of the body needs to be quoted and end with \n:
+ * "-----BEGIN PUBLIC KEY-----\n"
+ * "...base64 data...\n"
+ * "-----END PUBLIC KEY-----\n"
+ */
+const char devicePubKey[] = "-----BEGIN PUBLIC KEY-----\n"
+"...\n"
+"...\n"
+"...\n"
+"-----END PUBLIC KEY-----\n";
+
+/*
+ * PEM-encoded device private key
  *
  * Must include the PEM header and footer,
  * and every line of the body needs to be quoted and end with \n:
@@ -49,11 +64,26 @@ const char clientCrt[] = "-----BEGIN CERTIFICATE-----\n"
  * "...base64 data...\n"
  * "-----END RSA PRIVATE KEY-----";
  */
-const char clientKey[] = "-----BEGIN RSA PRIVATE KEY-----\n"
+const char devicePvtKey[] = "-----BEGIN RSA PRIVATE KEY-----\n"
 "...\n"
 "...\n"
 "...\n"
 "-----END RSA PRIVATE KEY-----";
+
+/*
+ * PEM-encoded code verification certificate
+ *
+ * Must include the PEM header and footer,
+ * and every line of the body needs to be quoted and end with \n:
+ * "-----BEGIN CERTIFICATE-----\n"
+ * "...base64 data...\n"
+ * "-----END CERTIFICATE-----";
+ */
+const char codeVerCrt[] = "-----BEGIN CERTIFICATE-----\n"
+"...\n"
+"...\n"
+"...\n"
+"-----END CERTIFICATE-----";
 
 }
 }

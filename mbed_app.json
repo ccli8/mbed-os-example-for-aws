@@ -17,8 +17,8 @@
         "*": {
             "mbed-trace.enable": true,
             "mbed-trace.max-level": "TRACE_LEVEL_INFO",
-            "aws-client.log-puts": "aws_iot_puts",
-            "aws-client.log-level-global": "IOT_LOG_INFO",
+            "target.components_add": ["AWSIOT_MQTT"],
+            "aws-client.log-retarget": true,
             "rtos.main-thread-stack-size": 8192,
             "rtos.thread-stack-size": 2048,
             "platform.error-filename-capture-enabled": true,
@@ -28,7 +28,7 @@
         "NUMAKER_PFM_M487": {
             "target.network-default-interface-type" : "ETHERNET",
             "target.macros_add"                     : ["MBEDTLS_ENTROPY_HARDWARE_ALT"]
-        },        
+        },
         "NUMAKER_IOT_M487": {
             "target.network-default-interface-type" : "WIFI",
             "nsapi.default-wifi-security"           : "WPA_WPA2",
